@@ -22,8 +22,13 @@
 #define GPCLK_CLKSRC_PLLD 6
 #define GPCLK_CLKSRC_HDMIAUX 7
 
+//Returns true if "gpclk_init()" has already been called.
 bool gpclk_is_active(void);
+//Initializes GPCLK procedure.
+//This function must be called before calling any other functions in this header.
+//Returns true if initialization is successful.
 bool gpclk_init(void);
+
 void gpclk_endpoint_map_to_gpio_pinmode(uint8_t gpclk, uint8_t endpoint, uint8_t *p_gpio, uint8_t *p_pinmode);
 void gpclk_init_gpio(uint8_t gpclk, uint8_t endpoint);
 void gpclk_deinit_gpio(uint8_t gpclk, uint8_t endpoint);
