@@ -32,7 +32,7 @@
 //Returns true if "intr_init()" has already been called.
 bool intr_is_active(void);
 //Initializes INTR procedure.
-//This function must be called before calling any other function in this header.
+//This function must be called before calling any other functions in this header.
 //Returns true if initialization is successful.
 bool intr_init(void);
 
