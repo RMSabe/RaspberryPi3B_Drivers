@@ -10,6 +10,11 @@
 #include "MMU32_usr.h" //Use this for aarch32 GNU-Linux
 //#include "MMU64_usr.h" //Use this for aarch64 GNU-Linux
 
+/*
+"DMA_CTRL_WAIT_KERNEL_RESPONSE"
+If defined, application will call kernel and wait for response before proceeding.
+Else, application will wait a specific time (defined in DMA_CTRL_WAIT_TIME_US) is microseconds before proceeding.
+*/
 #define DMA_CTRL_WAIT_KERNEL_RESPONSE
 
 #define DMA_CTRL_PROC_FILE_DIR "/proc/DMA_Ctrl"
