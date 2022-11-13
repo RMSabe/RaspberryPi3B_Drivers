@@ -24,6 +24,10 @@
 #define DMA_LITE_CH6 13
 #define DMA_LITE_CH7 14
 
+//Peripheral Mapping (PERMAP).
+//Peripheral ID Values. DMA Controller will receive data request signals from a specific peripheral.
+//Use "DMA_PERMAP_ALWAYS_ON" to keep data request signal always active. 
+//"DMA_PERMAP_ALWAYS_ON" (DMA Controller will not wait a data request signal to start transfer. Transfers will be performed immediatly).
 #define DMA_PERMAP_ALWAYS_ON 0
 #define DMA_PERMAP_DSI 1
 #define DMA_PERMAP_PCM_TX 2
@@ -70,8 +74,13 @@ typedef struct {
 	uint32_t unused_1;
 } dma_ctrlblock_t;
 
+//Returns true if "dma_init()" has already been called.
 bool dma_is_active(void);
+//Initializes DMA procedure.
+//This function must be called before calling any other functions in this header.
+//Returns true if initialization is successful.
 bool dma_init(void);
+
 void dma_reset_ctrlblock(dma_ctrlblock_t *p_ctrlblock);
 void dma_enable_ctrl(uint8_t dma_ctrl, bool enable);
 bool dma_ctrl_is_enabled(uint8_t dma_ctrl);
