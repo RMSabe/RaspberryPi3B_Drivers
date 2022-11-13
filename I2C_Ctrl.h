@@ -15,8 +15,13 @@
 #define I2C_WRITE_BIT 0
 #define I2C_READ_BIT 1
 
+//Returns true if "i2c_init()" has already been called.
 bool i2c_is_active(void);
+//Initializes I2C procedure.
+//This function must be called before calling any other function in this header.
+//Returns true if initialization is successful.
 bool i2c_init(void);
+
 void i2c_ctrl_endpoint_map_to_gpio_pinmode(uint8_t i2c_ctrl, uint8_t endpoint, uint8_t *p_sda_gpio, uint8_t *p_scl_gpio, uint8_t *p_pinmode);
 void i2c_init_gpio_default(uint8_t i2c_ctrl, uint8_t endpoint, bool enable_pullup);
 void i2c_deinit_gpio_default(uint8_t i2c_ctrl, uint8_t endpoint);
