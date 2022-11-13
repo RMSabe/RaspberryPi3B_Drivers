@@ -18,7 +18,7 @@
 //Returns true if "i2c_init()" has already been called.
 bool i2c_is_active(void);
 //Initializes I2C procedure.
-//This function must be called before calling any other function in this header.
+//This function must be called before calling any other functions in this header.
 //Returns true if initialization is successful.
 bool i2c_init(void);
 
