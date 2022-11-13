@@ -7,7 +7,7 @@
 //Returns true if "systimer_init()" has already been called.
 bool systimer_is_active(void);
 //Initializes SYSTIMER procedure.
-//This function must be called before calling any other function in this header.
+//This function must be called before calling any other functions in this header.
 //Returns true if initialization is successful.
 bool systimer_init(void);
 
