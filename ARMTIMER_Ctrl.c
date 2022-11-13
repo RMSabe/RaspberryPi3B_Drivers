@@ -7,6 +7,7 @@
 #include <unistd.h>
 
 /*
+"ARMTIMER_CTRL_WAIT_KERNEL_RESPONSE"
 If defined, application will call kernel and wait for response before proceeding.
 Else, application will wait a specific time (defined in ARMTIMER_CTRL_WAIT_TIME_US) is microseconds before proceeding.
 */
