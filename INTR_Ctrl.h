@@ -29,8 +29,13 @@
 #define INTR_IRQ_ID_ARM_ILLEGAL_ACCESS_TYPE1 70
 #define INTR_IRQ_ID_ARM_ILLEGAL_ACCESS_TYPE0 71
 
+//Returns true if "intr_init()" has already been called.
 bool intr_is_active(void);
+//Initializes INTR procedure.
+//This function must be called before calling any other function in this header.
+//Returns true if initialization is successful.
 bool intr_init(void);
+
 bool intr_basic_irq_occurred(uint8_t irq_id);
 bool intr_gpu_irq_occurred(uint8_t irq_id);
 void intr_enable_fiq(bool enable);
