@@ -8,6 +8,11 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+/*
+"MMU_WAIT_KERNEL_RESPONSE"
+If defined, application will call kernel and wait for response before proceeding.
+Else, application will wait a specific time (defined in MMU_WAIT_TIME_US) is microseconds before proceeding.
+*/
 #define MMU_WAIT_KERNEL_RESPONSE
 
 #define MMU_PROC_FILE_DIR "/proc/MMU32"
