@@ -8,6 +8,11 @@
 
 #include "GPIO_Ctrl.h"
 
+/*
+"GPCLK_CTRL_WAIT_KERNEL_RESPONSE"
+If defined, application will call kernel and wait for response before proceeding.
+Else, application will wait a specific time (defined in GPCLK_CTRL_WAIT_TIME_US) is microseconds before proceeding.
+*/
 #define GPCLK_CTRL_WAIT_KERNEL_RESPONSE
 
 #define GPCLK_CTRL_PROC_FILE_DIR "/proc/GPCLK_Ctrl"
