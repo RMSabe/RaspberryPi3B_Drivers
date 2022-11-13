@@ -11,8 +11,13 @@
 #define ARMTIMER_COUNTSIZE_16BITS 0
 #define ARMTIMER_COUNTSIZE_32BITS 1
 
+//Retuns true if "armtimer_init()" has already been called.
 bool armtimer_is_active(void);
+//Initializes the driver procedure.
+//This function must be called before calling any other functions in this header.
+//Returns true if initialization is successful.
 bool armtimer_init(void);
+
 void armtimer_set_load_value(uint32_t value);
 uint32_t armtimer_get_load_value(void);
 uint32_t armtimer_get_countdown_value(void);
