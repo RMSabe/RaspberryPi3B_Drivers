@@ -1,5 +1,9 @@
 # RaspberryPi3B_Drivers
 
+!!DEPRECATED!!
+I'm starting to make a new version of these drivers, available at https://github.com/RMSabe/RaspberryPi3B/tree/main/Kernel
+
+
 These are some drivers for hardware control on the Raspberry Pi 3B peripherals. 
 I made them on Raspberry Pi OS (Raspbian) armhf (aarch32). I haven't tested it on Raspberry Pi OS arm64 (aarch64) or any other OS. 
 I believe these will compile and run on Raspberry Pi OS arm64, since it's the same hardware and GNU-Linux distro, (Raspberry Pi OS, BCM2837).
